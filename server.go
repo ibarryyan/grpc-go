@@ -599,6 +599,7 @@ func (s *Server) stopServerWorkers() {
 // NewServer creates a gRPC server which has no service registered and has not
 // started to accept requests yet.
 func NewServer(opt ...ServerOption) *Server {
+	//配置
 	opts := defaultServerOptions
 	for _, o := range extraServerOptions {
 		o.apply(&opts)
